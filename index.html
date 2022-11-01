@@ -311,57 +311,57 @@
             </footer>
         </section>
   
-    <!-- Script del documento JavaScript -->
+    <!-- Script JavaScript Validar inputs Seccion Contacto-->
     <script>
 
-const nombre = document.getElementById("name");
-const email = document.getElementById("email");
-let mensaje = document.getElementById("message");
-var form = document.getElementById("from");
-const parrafo1 = document.getElementById("warnings1");
-const parrafo2 = document.getElementById("warnings2");
-const parrafo3 = document.getElementById("warnings3");
-const parrafo4 = document.getElementById("warnings4");
-const btvEnvio = document.getElementById("enviarCorreo");
+        const nombre = document.getElementById("name");
+        const email = document.getElementById("email");
+        let mensaje = document.getElementById("message");
+        var form = document.getElementById("from");
+        const parrafo1 = document.getElementById("warnings1");
+        const parrafo2 = document.getElementById("warnings2");
+        const parrafo3 = document.getElementById("warnings3");
+        const parrafo4 = document.getElementById("warnings4");
+        const btvEnvio = document.getElementById("enviarCorreo");
 
 
-form.addEventListener("submit", e=>{
-    e.preventDefault();
-	  let warnings1 ="";
-	  let warnings2 ="";
-	  let warnings3 ="";
-	  let entrar = false;
-	let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-	parrafo1.innerHTML="";
-	parrafo2.innerHTML="";
-	parrafo3.innerHTML="";
+        form.addEventListener("submit", e=>{
+            e.preventDefault();
+            let warnings1 ="";
+            let warnings2 ="";
+            let warnings3 ="";
+            let entrar = false;
+            let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+            parrafo1.innerHTML="";
+            parrafo2.innerHTML="";
+            parrafo3.innerHTML="";
 
-   if(nombre.value.length < 6) {
-     warnings1 += `El nombre no es valido <br>`;
-	 entrar = true;
-	 parrafo1.innerHTML = warnings1;
-   }
+        if(nombre.value.length < 6) {
+            warnings1 += `El nombre no es valido <br>`;
+            entrar = true;
+            parrafo1.innerHTML = warnings1;
+        }
 
-   if(!regexEmail.test(email.value)){
-	warnings2 += `El email no es valido <br>`;
-	entrar = true;
-	parrafo2.innerHTML = warnings2;
-   }
+        if(!regexEmail.test(email.value)){
+            warnings2 += `El email no es valido <br>`;
+            entrar = true;
+            parrafo2.innerHTML = warnings2;
+        }
 
 
-   if(mensaje.value.length < 6) {
-	warnings3 += `El mensaje no es valido <br>`;
-	entrar = true;
-	parrafo3.innerHTML = warnings3;
-  }
+        if(mensaje.value.length < 6) {
+            warnings3 += `El mensaje no es valido <br>`;
+            entrar = true;
+            parrafo3.innerHTML = warnings3;
+        }
 
-   
-   if(!entrar) {
-    parrafo4.innerHTML = "Enviado...";
-	
-   }
+        
+        if(!entrar) {
+            parrafo4.innerHTML = "Enviado...";
+            
+        }
 
-});
+        });
 
 
 	   
