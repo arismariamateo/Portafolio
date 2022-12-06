@@ -126,7 +126,7 @@
                                 <p>70%</p>
                             </div>
                         </div>
-                    </div>
+                     </div>
                       <div class="skills-row">
                         <div class="skills-row-left">
                             <div class="skills-row-left-image">
@@ -191,7 +191,7 @@
                             <p><span>1989</span></p>
                         </div>
                         <div class="timeline-row-text">
-                            <h4>Universidad Exp. Lisandro Alvadado</h4>
+                            <h4>Universidad Lisandro Alvadado</h4>
                             <p>Analista de Sistema</p>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                       <p><span>2010</span></p>
                         </div>
                         <div class="timeline-row-text">
-                            <h4>Universidad Yacambú</h4>
+                            <h4>Universidad Yacambú Online</h4>
                             <p>Especialización en Sistemas de Información</p>
                         </div>
                     </div>
@@ -218,26 +218,26 @@
                             <p><span>2020</span></p>
                         </div>
                         <div class="timeline-row-text">
-                            <h4>Forma Autodidacta</h4>
+                            <h4>  Formación  Autodidacta  </h4>
                             <p>Lenguaje Java, Mysql para Desktop y Android.</p>
                         </div>
                     </div>
                     <div class="timeline-row">
                         <div class="timeline-row-tag">
-                            <p><span>2022-Actual</span></p>
+                            <p><span>2022</span></p>
                         </div>
                         <div class="timeline-row-text">
-                            <h4>Oracle ONE en Alura Latam</h4>
-                            <p>Web Developer</p>
+                            <h4>  ONE - Oracle Next Education - Alura    </h4>
+                            <p>Estudiante Grupo3 2022</p>
                         </div>
                     </div>
                     <div class="timeline-row">
                         <div class="timeline-row-tag">
-                            <p><span>CV</span></p>
+                            <p><span>  CV  </span></p>
                         </div>
                         <div class="timeline-row-text">
                             <h4>Ver PDF</h4>
-                            <embed src="docs/CV_Aris_Mateo.pdf" type="application/pdf" width="440px" height="630px">
+                            <embed src="docs/CV_Aris_Mateo.pdf" type="application/pdf" class="pdf" >
                         </div>
                     </div>                 
                 </div>
@@ -311,61 +311,8 @@
             </footer>
         </section>
   
-    <!-- Script JavaScript Validar inputs Seccion Contacto-->
-    <script>
-
-        const nombre = document.getElementById("name");
-        const email = document.getElementById("email");
-        let mensaje = document.getElementById("message");
-        var form = document.getElementById("from");
-        const parrafo1 = document.getElementById("warnings1");
-        const parrafo2 = document.getElementById("warnings2");
-        const parrafo3 = document.getElementById("warnings3");
-        const parrafo4 = document.getElementById("warnings4");
-        const btvEnvio = document.getElementById("enviarCorreo");
-
-
-        form.addEventListener("submit", e=>{
-            e.preventDefault();
-            let warnings1 ="";
-            let warnings2 ="";
-            let warnings3 ="";
-            let entrar = false;
-            let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-            parrafo1.innerHTML="";
-            parrafo2.innerHTML="";
-            parrafo3.innerHTML="";
-
-        if(nombre.value.length < 6) {
-            warnings1 += `El nombre no es valido <br>`;
-            entrar = true;
-            parrafo1.innerHTML = warnings1;
-        }
-
-        if(!regexEmail.test(email.value)){
-            warnings2 += `El email no es valido <br>`;
-            entrar = true;
-            parrafo2.innerHTML = warnings2;
-        }
-
-
-        if(mensaje.value.length < 6) {
-            warnings3 += `El mensaje no es valido <br>`;
-            entrar = true;
-            parrafo3.innerHTML = warnings3;
-        }
-
-        
-        if(!entrar) {
-            parrafo4.innerHTML = "Enviado...";
-            
-        }
-
-        });
-
-
-	   
-    </script>
+    <!-- Script del documento JavaScript -->
+    <script src="validar.js"></script>
 
 </body>
 </html>
